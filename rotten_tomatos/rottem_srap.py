@@ -33,7 +33,7 @@ class rotten_tomatos():
     # ====================================================================
     def get_my_movies(self):
 
-        browser = webdriver.Chrome(executable_path="C:/Users/Juan Camilo Díaz/Dropbox/Project_VSC/python_projects/rotten_tomatos/chromedriver")
+        browser = webdriver.Chrome(executable_path="C:/Users/juanc/Dropbox/Project_VSC/python_projects/rotten_tomatos/chromedriver")
         browser.get(f'https://www.rottentomatoes.com/user/id/{self.user_id}/ratings')
         print("(!) REALIZA EL SCROLL EN LA PAGINA HASTA LLEGAR A LA ULTIMA PELICULA.")
         time.sleep(self.secs_to_sleep)
@@ -41,7 +41,7 @@ class rotten_tomatos():
         all_items = browser.find_elements_by_xpath("//*[@id='col_right_index']/section/div/ul/li")
 
         # Create CSV File
-        f = open("C:/Users/Juan Camilo Díaz/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_" + self.user_id + ".csv", 'w', newline='')
+        f = open("C:/Users/juanc/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_" + self.user_id + ".csv", 'w', newline='')
         theFile = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         theFile.writerow(['Title','Year', 'Rating', 'Date Rated', 'URL', 'Poster URL'])
 
@@ -116,11 +116,11 @@ class rotten_tomatos():
     # ============================================================================
     def get_metadata_movies(self, CSVdelimeter = ";"):
 
-        data_movies = pd.read_csv(f"C:/Users/Juan Camilo Díaz/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_{self.user_id}.csv", delimiter=CSVdelimeter)
+        data_movies = pd.read_csv(f"C:/Users/juanc/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_{self.user_id}.csv", delimiter=CSVdelimeter)
         url_movies = data_movies['URL']
 
         # Create CSV File
-        f = open(f"C:/Users/Juan Camilo Díaz/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_metadata_{self.user_id}.csv", 'w', newline='')
+        f = open(f"C:/Users/juanc/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_metadata_{self.user_id}.csv", 'w', newline='')
         myFile = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         myFile.writerow(['href','tomatometer', 'audience_score', 'genre', 'director', 'runtime', 'studio', 'cast', 'date'])
 
@@ -130,7 +130,7 @@ class rotten_tomatos():
         for url in url_movies:
             print(f"\nRecopilando info de {url} | {c+1} de {len(url_movies)}")
 
-            browser = webdriver.Chrome(executable_path="C:/Users/Juan Camilo Díaz/Dropbox/Project_VSC/python_projects/rotten_tomatos/chromedriver", desired_capabilities= capa)
+            browser = webdriver.Chrome(executable_path="C:/Users/juanc/Dropbox/Project_VSC/python_projects/rotten_tomatos/chromedriver", desired_capabilities= capa)
             wait = WebDriverWait(browser, 20)
             browser.get(url)
 
@@ -239,8 +239,8 @@ class rotten_tomatos():
         return result
 
     def combine_files(self, CSVdelimeter = ";"):
-        data_movies = pd.read_csv(f"C:/Users/Juan Camilo Díaz/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_{self.user_id}.csv", delimiter=CSVdelimeter)
-        metadata    = pd.read_csv(f"C:/Users/Juan Camilo Díaz/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_metadata_{self.user_id}.csv", delimiter=CSVdelimeter)
+        data_movies = pd.read_csv(f"C:/Users/juanc/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_{self.user_id}.csv", delimiter=CSVdelimeter)
+        metadata    = pd.read_csv(f"C:/Users/juanc/Dropbox/Project_VSC/python_projects/rotten_tomatos/movies_metadata_{self.user_id}.csv", delimiter=CSVdelimeter)
 
         metadata.rename(columns={'href': 'URL'}, inplace = True)
 

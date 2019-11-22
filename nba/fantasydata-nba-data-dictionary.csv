@@ -1,0 +1,764 @@
+TableID,TableName,Name,DataType,Size,Nullable,Description,IsInCSV,Scrambled
+3001000,Team,TeamID,integer,32,False,The auto-generated unique ID of the Team,True,False
+3001000,Team,[Key],string,10,False,Abbreviation of the team (e.g. LAL; PHI; BOS; CHI; etc.),True,False
+3001000,Team,Active,boolean,,False,Whether or not this team is active,True,False
+3001000,Team,City,string,50,True,The city/location of the team (e.g. Los Angeles; Philadelphia; Boston; Chicago; etc.),True,False
+3001000,Team,Name,string,50,True,The mascot of the team (e.g. Lakers; 76ers; Celtics; Bulls; etc.),True,False
+3001000,Team,LeagueID,integer,32,True,The league of the team (possible values: Eastern; Western),True,False
+3001000,Team,StadiumID,integer,32,True,The unique ID of the team's current home stadium,True,False
+3001000,Team,Conference,string,20,True,The conference of the team (possible values: Eastern; Western),True,False
+3001000,Team,Division,string,20,True,The division of the team (e.g. Atlantic; Central; Southeast; etc),True,False
+3001000,Team,PrimaryColor,string,6,True,The team's primary color. (This is not licensed for public or commercial use),True,False
+3001000,Team,SecondaryColor,string,6,True,The team's secondary color. (This is not licensed for public or commercial use),True,False
+3001000,Team,TertiaryColor,string,6,True,The team's tertiary color. (This is not licensed for public or commercial use),True,False
+3001000,Team,QuaternaryColor,string,6,True,The team's quaternary color. (This is not licensed for public or commercial use),True,False
+3001000,Team,WikipediaLogoUrl,string,250,True,The link to the team's logo hosted on Wikipedia. (This is not licensed for public or commercial use),True,False
+3001000,Team,WikipediaWordMarkUrl,string,250,True,The link to the team's wordmark logo hosted on Wikipedia. (This is not licensed for public or commercial use),True,False
+3001000,Team,GlobalTeamID,integer,32,False,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3001000,Team,NbaDotComTeamID,integer,32,True,The team's ID on nba dot com,True,False
+3002000,Stadium,StadiumID,integer,32,False,The unique ID of the stadium,True,False
+3002000,Stadium,Active,boolean,,False,Whether or not this stadium is the home venue for an active team,True,False
+3002000,Stadium,Name,string,50,False,The full name of the stadium,True,False
+3002000,Stadium,Address,string,50,True,The address where the stadium is located,True,False
+3002000,Stadium,City,string,50,True,The city where the stadium is located,True,False
+3002000,Stadium,State,string,10,True,The US state where the stadium is located (if Stadium is outside US; this value is NULL),True,False
+3002000,Stadium,Zip,string,10,True,The zip code of the stadium,True,False
+3002000,Stadium,Country,string,10,True,The 2-digit country code where the stadium is located,True,False
+3002000,Stadium,Capacity,integer,32,True,The estimated seating capacity of the stadium,True,False
+3002000,Stadium,GeoLat,decimal,32,True,The geographic latitude coordinate of this venue.,True,False
+3002000,Stadium,GeoLong,decimal,32,True,The geographic longitude coordinate of this venue.,True,False
+3003000,Game,GameID,integer,32,False,The unique ID of this game,True,False
+3003000,Game,Season,integer,32,False,The NBA season of the game,True,False
+3003000,Game,SeasonType,integer,32,False,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Playoffs).,True,False
+3003000,Game,Status,string,20,True,Indicates the game's status. Possible values include: Scheduled; InProgress; Final; F/OT; Suspended; Postponed; Canceled,True,False
+3003000,Game,Day,date,,True,The date of the game,True,False
+3003000,Game,DateTime,datetime,,True,The date and time of the game,True,False
+3003000,Game,AwayTeam,string,10,False,The abbreviation of the Away Team,True,False
+3003000,Game,HomeTeam,string,10,False,The abbreviation of the Home Team,True,False
+3003000,Game,AwayTeamID,integer,32,False,The unique ID of the away team,True,False
+3003000,Game,HomeTeamID,integer,32,False,The unique ID of the home team,True,False
+3003000,Game,StadiumID,integer,32,True,The unique ID of the stadium,True,False
+3003000,Game,Channel,string,10,True,The television station broadcasting the game,True,False
+3003000,Game,Attendance,integer,32,True,Total number of people who attended the game,True,False
+3003000,Game,AwayTeamScore,integer,32,True,Number of points the away scored in this game,True,True
+3003000,Game,HomeTeamScore,integer,32,True,Number of points the home scored in this game,True,True
+3003000,Game,Updated,datetime,,True,The timestamp of when the record was last updated (US Eastern Time).,True,False
+3003000,Game,Quarter,string,10,True,The current quarter in the game. Possible values include: 1; 2; 3; 4; Half; OT; NULL,True,False
+3003000,Game,TimeRemainingMinutes,integer,32,True,Number of minutes remaining in the quarter,True,False
+3003000,Game,TimeRemainingSeconds,integer,32,True,Number of seconds remaining in the quarter,True,False
+3003000,Game,PointSpread,decimal,32,True,The oddsmaker Point Spread at game start from the perspective of the HomeTeam (negative numbers indicate the HomeTeam is favored; positive numbers indicate the AwayTeam is favored),True,True
+3003000,Game,OverUnder,decimal,32,True,The oddsmaker Over/Under at game start,True,True
+3003000,Game,AwayTeamMoneyLine,integer,32,True,Money line from the perspective of the away team,True,True
+3003000,Game,HomeTeamMoneyLine,integer,32,True,Money line from the perspective of the home team,True,True
+3003000,Game,GlobalGameID,integer,32,False,A globally unique ID for this game. This value is guaranteed to be unique across all sports/leagues.,False,False
+3003000,Game,GlobalAwayTeamID,integer,32,False,A globally unique ID for the away team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3003000,Game,GlobalHomeTeamID,integer,32,False,A globally unique ID for the home team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3003000,Game,PointSpreadAwayTeamMoneyLine,integer,32,True,The money line payout odds when betting on the away team with the point spread,True,True
+3003000,Game,PointSpreadHomeTeamMoneyLine,integer,32,True,The money line payout odds when betting on the home team with the point spread,True,True
+3003000,Game,LastPlay,string,250,True,The description of the most recent play/event of the game. This is for display purposes and does not include corresponding data points.,True,True
+3003000,Game,IsClosed,boolean,,False,Indicates whether the game is over and the final score has been verified and closed out.,True,False
+3003000,Game,Quarters,Quarter[],,False,The details of the quarters (including overtime periods) for this game.,True,False
+3003000,Game,GameEndDateTime,datetime,,True,The date and time that the game ended in US Eastern Time,True,False
+3003000,Game,HomeRotationNumber,integer,32,True,The Rotation number of the home team for this game,True,True
+3003000,Game,AwayRotationNumber,integer,32,True,The Rotation number of the away team for this game,True,True
+3004000,Quarter,QuarterID,integer,32,False,Unique identifier for each Quarter.,True,False
+3004000,Quarter,GameID,integer,32,False,The unique ID for this game.,True,False
+3004000,Quarter,Number,integer,32,False,The Number (Order) of the Quarter in the scope of the Game.,True,False
+3004000,Quarter,Name,string,10,False,The Name of the Quarter (possible values: 1; 2; 3; 4; OT; OT2; OT3; etc),True,False
+3004000,Quarter,AwayScore,integer,32,True,The total points scored by the away team in this Quarter.,True,True
+3004000,Quarter,HomeScore,integer,32,True,The total points scored by the home team in this Quarter.,True,True
+3005000,Player,PlayerID,integer,32,False,The player's unique PlayerID as assigned by FantasyData.,True,False
+3005000,Player,SportsDataID,string,50,True,Deprecated. Use SportRadarPlayerID instead.,True,False
+3005000,Player,Status,string,10,True,Indicates the player's status of being on an active roster. Possible values include: Active; Inactive,True,False
+3005000,Player,TeamID,integer,32,True,The TeamID of the team this player is employed by.,True,False
+3005000,Player,Team,string,10,True,The key/abbreviation of the team this player is employed by.,True,False
+3005000,Player,Jersey,integer,32,True,The player's jersey number.,True,False
+3005000,Player,PositionCategory,string,10,True,The player's position category. Possible values: C; F; G,True,False
+3005000,Player,Position,string,10,True,The player's primary position. Possible values: C; PF; PG; SF; SG,True,False
+3005000,Player,FirstName,string,50,True,The player's first name.,True,False
+3005000,Player,LastName,string,50,True,The player's last name.,True,False
+3005000,Player,Height,integer,32,True,The player's height in inches.,True,False
+3005000,Player,Weight,integer,32,True,The player's weight in pounds (lbs).,True,False
+3005000,Player,BirthDate,datetime,,True,The player's date of birth.,True,False
+3005000,Player,BirthCity,string,50,True,The city in which the player was born.,True,False
+3005000,Player,BirthState,string,50,True,The state in which the player was born.,True,False
+3005000,Player,BirthCountry,string,50,True,The country in which the player was born.,True,False
+3005000,Player,HighSchool,string,50,True,The high school that the player attended.,True,False
+3005000,Player,College,string,50,True,The college that the player attended.,True,False
+3005000,Player,Salary,integer,32,True,The player's salary for the current season.,True,False
+3005000,Player,PhotoUrl,string,250,True,The URL of the player's headshot photo.,True,False
+3005000,Player,Experience,integer,32,True,The number of years experience the player has in the NBA.,True,False
+3005000,Player,SportRadarPlayerID,string,50,True,The player's cross reference PlayerID to the SportRadar API.,True,False
+3005000,Player,RotoworldPlayerID,integer,32,True,The player's cross reference PlayerID to the Rotoworld news feed.,True,False
+3005000,Player,RotoWirePlayerID,integer,32,True,The player's cross reference PlayerID to the RotoWire news feed.,True,False
+3005000,Player,FantasyAlarmPlayerID,integer,32,True,The player's cross reference PlayerID to the FantasyAlarm news feed.,True,False
+3005000,Player,StatsPlayerID,integer,32,True,The player's cross reference PlayerID to the STATS data feeds.,True,False
+3005000,Player,SportsDirectPlayerID,integer,32,True,The player's cross reference PlayerID to the SportsDirect data feeds.,True,False
+3005000,Player,XmlTeamPlayerID,integer,32,True,The player's cross reference PlayerID to the XML Team data feeds.,True,False
+3005000,Player,InjuryStatus,string,50,True,Indicates the player's injury status. Possible values include: Probable; Questionable; Doubtful; Out,True,True
+3005000,Player,InjuryBodyPart,string,50,True,The body part that is injured (Knee; Groin; Calf; Hamstring; etc.),True,True
+3005000,Player,InjuryStartDate,date,,True,The day that the injury started or first discovered.,True,False
+3005000,Player,InjuryNotes,string,250,True,Brief description of the player's injury and expected availability.,True,True
+3005000,Player,FanDuelPlayerID,integer,32,True,The player's cross reference PlayerID to FanDuel.,True,False
+3005000,Player,DraftKingsPlayerID,integer,32,True,The player's cross reference PlayerID to DraftKings.,True,False
+3005000,Player,YahooPlayerID,integer,32,True,The player's cross reference PlayerID to Yahoo Daily Fantasy Sports Contests.,True,False
+3005000,Player,FanDuelName,string,50,True,The player's full name in FanDuel's daily fantasy sports platform.,True,False
+3005000,Player,DraftKingsName,string,50,True,The player's full name in DraftKings' daily fantasy sports platform.,True,False
+3005000,Player,YahooName,string,50,True,The player's full name in Yahoo's daily fantasy sports platform.,True,False
+3005000,Player,DepthChartPosition,string,10,True,The position of the player on the depth chart.,True,False
+3005000,Player,DepthChartOrder,integer,32,True,The order of the player on the depth chart.,True,True
+3005000,Player,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3005000,Player,FantasyDraftName,string,50,True,The player's full name in FantasyDraft's daily fantasy sports platform.,True,False
+3005000,Player,FantasyDraftPlayerID,integer,32,True,The player's cross reference PlayerID to Fantasy Draft.,True,False
+3005000,Player,UsaTodayPlayerID,integer,32,True,The player's cross reference PlayerID to USA Today headshot data feeds.,True,False
+3005000,Player,UsaTodayHeadshotUrl,string,100,True,The player's headshot URL as provided by USA Today. License from USA Today is required.,True,False
+3005000,Player,UsaTodayHeadshotNoBackgroundUrl,string,100,True,The player's transparent background headshot URL as provided by USA Today. License from USA Today is required.,True,False
+3005000,Player,UsaTodayHeadshotUpdated,datetime,,True,The last updated date of the player's headshot as provided by USA Today. License from USA Today is required.,True,False
+3005000,Player,UsaTodayHeadshotNoBackgroundUpdated,datetime,,True,The last updated date of the player's transparent background headshot as provided by USA Today. License from USA Today is required.,True,False
+3005000,Player,NbaDotComPlayerID,integer,32,True,The player's personid on nba dot com,True,False
+3008000,PlayerGame,StatID,integer,32,False,The unique ID of the stat,True,False
+3008000,PlayerGame,TeamID,integer,32,True,The unique ID of the team,True,False
+3008000,PlayerGame,PlayerID,integer,32,True,Unique ID assigned to each player that stays with them throughout their career,True,False
+3008000,PlayerGame,SeasonType,integer,32,True,The season type of the timeframe (1=Regular Season; 2=Preseason; 3=Postseason),True,False
+3008000,PlayerGame,Season,integer,32,True,The NBA season of the game,True,False
+3008000,PlayerGame,Name,string,50,True,Player's name,True,False
+3008000,PlayerGame,Team,string,10,True,The abbreviation of the Team,True,False
+3008000,PlayerGame,Position,string,10,True,The player's position associated with the given game or season. Possible values: C; F; FC; G; GF; PF; PG; SF; SG,True,False
+3008000,PlayerGame,Started,integer,32,True,Whether the player started,True,False
+3008000,PlayerGame,FanDuelSalary,integer,32,True,The player's salary for FanDuel daily fantasy contests.,True,True
+3008000,PlayerGame,DraftKingsSalary,integer,32,True,The player's salary for DraftKings daily fantasy contests.,True,True
+3008000,PlayerGame,FantasyDataSalary,integer,32,True,The player's salary as calculated by FantasyData.  Based on the same salary cap as DraftKings contests ($50;000).,True,True
+3008000,PlayerGame,YahooSalary,integer,32,True,The player's salary for Yahoo daily fantasy contests.,True,True
+3008000,PlayerGame,InjuryStatus,string,50,True,Indicates the player's injury status. Possible values include: Probable; Questionable; Doubtful; Out,True,True
+3008000,PlayerGame,InjuryBodyPart,string,50,True,The body part that is injured (Knee; Groin; Calf; Hamstring; etc.),True,True
+3008000,PlayerGame,InjuryStartDate,date,,True,The day that the injury started or first discovered.,True,False
+3008000,PlayerGame,InjuryNotes,string,250,True,Brief description of the player's injury and expected availability.,True,True
+3008000,PlayerGame,FanDuelPosition,string,10,True,The player's eligible position in FanDuel's daily fantasy sports platform.,True,False
+3008000,PlayerGame,DraftKingsPosition,string,10,True,The player's eligible position in DraftKings' daily fantasy sports platform.,True,False
+3008000,PlayerGame,YahooPosition,string,10,True,The player's eligible position in Yahoo's daily fantasy sports platform.,True,False
+3008000,PlayerGame,OpponentRank,integer,32,True,The ranking of the player's opponent with regards to fantasy points allowed.,True,True
+3008000,PlayerGame,OpponentPositionRank,integer,32,True,The ranking of the player's opponent by position with regards to fantasy points allowed.,True,True
+3008000,PlayerGame,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3008000,PlayerGame,FantasyDraftSalary,integer,32,True,The player's salary for Fantasy Draft daily fantasy contests.,True,True
+3008000,PlayerGame,FantasyDraftPosition,string,10,True,The player's eligible position in Fantasy Drafts daily fantasy sports platform.,True,True
+3008000,PlayerGame,GameID,integer,32,True,The unique ID of this game,True,False
+3008000,PlayerGame,OpponentID,integer,32,True,The unique ID of the team's opponent,True,False
+3008000,PlayerGame,Opponent,string,10,True,The name of the opponent ,True,False
+3008000,PlayerGame,Day,date,,True,The day of the game,True,False
+3008000,PlayerGame,DateTime,datetime,,True,The date and time of the game,True,False
+3008000,PlayerGame,HomeOrAway,string,4,True,Whether the team is home or away,True,False
+3008000,PlayerGame,IsGameOver,boolean,,False,Whether the game is over (true/false),True,False
+3008000,PlayerGame,GlobalGameID,integer,32,True,A globally unique ID for this game. This value is guaranteed to be unique across all sports/leagues.,False,False
+3008000,PlayerGame,GlobalOpponentID,integer,32,True,A globally unique ID for this opponent. This value is guaranteed to be unique across all sports/leagues.,True,False
+3008000,PlayerGame,Updated,datetime,,True,The timestamp of when the record was last updated (US Eastern Time),True,False
+3008000,PlayerGame,Games,integer,32,True,The number of games played,True,False
+3008000,PlayerGame,FantasyPoints,decimal,32,True,Total fantasy points,True,True
+3008000,PlayerGame,Minutes,integer,32,True,Total number of minutes played,True,True
+3008000,PlayerGame,Seconds,integer,32,True,Total number of seconds played,True,True
+3008000,PlayerGame,FieldGoalsMade,decimal,32,True,Total number of field goals made,True,True
+3008000,PlayerGame,FieldGoalsAttempted,decimal,32,True,Total number of field goals attempted,True,True
+3008000,PlayerGame,FieldGoalsPercentage,decimal,32,True,Total field goal percentage,True,True
+3008000,PlayerGame,EffectiveFieldGoalsPercentage,decimal,32,True,Total effective field goals percentage,True,True
+3008000,PlayerGame,TwoPointersMade,decimal,32,True,Total two pointers made,True,True
+3008000,PlayerGame,TwoPointersAttempted,decimal,32,True,Total two pointers attempted,True,True
+3008000,PlayerGame,TwoPointersPercentage,decimal,32,True,Total two pointers percentage,True,True
+3008000,PlayerGame,ThreePointersMade,decimal,32,True,Total three pointers made,True,True
+3008000,PlayerGame,ThreePointersAttempted,decimal,32,True,Total three pointers attempted,True,True
+3008000,PlayerGame,ThreePointersPercentage,decimal,32,True,Total three pointers percentage,True,True
+3008000,PlayerGame,FreeThrowsMade,decimal,32,True,Total free throws made,True,True
+3008000,PlayerGame,FreeThrowsAttempted,decimal,32,True,Total free throws attempted,True,True
+3008000,PlayerGame,FreeThrowsPercentage,decimal,32,True,Total free throws percentage,True,True
+3008000,PlayerGame,OffensiveRebounds,decimal,32,True,Total offensive rebounds,True,True
+3008000,PlayerGame,DefensiveRebounds,decimal,32,True,Total defensive rebounds,True,True
+3008000,PlayerGame,Rebounds,decimal,32,True,Total rebounds,True,True
+3008000,PlayerGame,OffensiveReboundsPercentage,decimal,32,True,Total offensive rebounds percentage,True,True
+3008000,PlayerGame,DefensiveReboundsPercentage,decimal,32,True,Total defensive rebounds percentage,True,True
+3008000,PlayerGame,TotalReboundsPercentage,decimal,32,True,The player/team total rebounds percentage,True,True
+3008000,PlayerGame,Assists,decimal,32,True,Total assists,True,True
+3008000,PlayerGame,Steals,decimal,32,True,Total steals,True,True
+3008000,PlayerGame,BlockedShots,decimal,32,True,Total blocked shots,True,True
+3008000,PlayerGame,Turnovers,decimal,32,True,Total turnovers,True,True
+3008000,PlayerGame,PersonalFouls,decimal,32,True,Total personal fouls,True,True
+3008000,PlayerGame,Points,decimal,32,True,Total points scored,True,True
+3008000,PlayerGame,TrueShootingAttempts,decimal,32,True,The player's true shooting attempts as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3008000,PlayerGame,TrueShootingPercentage,decimal,32,True,The player's true shooting percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3008000,PlayerGame,PlayerEfficiencyRating,decimal,32,True,The player's linear weight efficiency rating as defined here: http://bleacherreport.com/articles/113144-cracking-the-code-how-to-calculate-hollingers-per-without-all-the-mess,True,True
+3008000,PlayerGame,AssistsPercentage,decimal,32,True,The player's assist percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3008000,PlayerGame,StealsPercentage,decimal,32,True,The player's steal percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3008000,PlayerGame,BlocksPercentage,decimal,32,True,The player's block percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3008000,PlayerGame,TurnOversPercentage,decimal,32,True,The player's turnover percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3008000,PlayerGame,UsageRatePercentage,decimal,32,True,The player's usage rate percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3008000,PlayerGame,FantasyPointsFanDuel,decimal,32,True,Total FanDuel daily fantasy points scored,True,True
+3008000,PlayerGame,FantasyPointsDraftKings,decimal,32,True,Total DraftKings daily fantasy points scored,True,True
+3008000,PlayerGame,FantasyPointsYahoo,decimal,32,True,Total Yahoo daily fantasy points scored,True,True
+3008000,PlayerGame,PlusMinus,decimal,32,True,Total plus minus,True,True
+3008000,PlayerGame,DoubleDoubles,decimal,32,True,Total double-doubles scored,True,True
+3008000,PlayerGame,TripleDoubles,decimal,32,True,Total triple-doubles scored,True,True
+3008000,PlayerGame,FantasyPointsFantasyDraft,decimal,32,True,Total FantasyDraft daily fantasy points scored,True,True
+3008000,PlayerGame,IsClosed,boolean,,False,Indicates whether the game is over and the stats for this player have been verified and closed out.,True,False
+3009000,TeamGame,StatID,integer,32,False,The unique ID of the stat,True,False
+3009000,TeamGame,TeamID,integer,32,True,The unique ID of the team,True,False
+3009000,TeamGame,SeasonType,integer,32,True,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Postseason; 4=Offseason; 5=AllStar).,True,False
+3009000,TeamGame,Season,integer,32,True,The NBA season of the game,True,False
+3009000,TeamGame,Name,string,50,True,Team's name,True,False
+3009000,TeamGame,Team,string,10,True,The abbreviation of the Team,True,False
+3009000,TeamGame,Wins,integer,32,True,Total number of team wins,True,False
+3009000,TeamGame,Losses,integer,32,True,Total number of team losses,True,False
+3009000,TeamGame,Possessions,decimal,32,True,Total number of team possessions,True,True
+3009000,TeamGame,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3009000,TeamGame,GameID,integer,32,True,The unique ID of this game,True,False
+3009000,TeamGame,OpponentID,integer,32,True,The unique ID of the team's opponent,True,False
+3009000,TeamGame,Opponent,string,10,True,The name of the opponent ,True,False
+3009000,TeamGame,Day,date,,True,The day of the game,True,False
+3009000,TeamGame,DateTime,datetime,,True,The date and time of the game,True,False
+3009000,TeamGame,HomeOrAway,string,4,True,Whether the team is home or away,True,False
+3009000,TeamGame,IsGameOver,boolean,,False,Whether the game is over (true/false),True,False
+3009000,TeamGame,GlobalGameID,integer,32,True,A globally unique ID for this game. This value is guaranteed to be unique across all sports/leagues.,False,False
+3009000,TeamGame,GlobalOpponentID,integer,32,True,A globally unique ID for this opponent. This value is guaranteed to be unique across all sports/leagues.,True,False
+3009000,TeamGame,Updated,datetime,,True,The timestamp of when the record was last updated (US Eastern Time),True,False
+3009000,TeamGame,Games,integer,32,True,The number of games played,True,False
+3009000,TeamGame,FantasyPoints,decimal,32,True,Total fantasy points,True,True
+3009000,TeamGame,Minutes,integer,32,True,Total number of minutes played,True,True
+3009000,TeamGame,Seconds,integer,32,True,Total number of seconds played,True,True
+3009000,TeamGame,FieldGoalsMade,decimal,32,True,Total number of field goals made,True,True
+3009000,TeamGame,FieldGoalsAttempted,decimal,32,True,Total number of field goals attempted,True,True
+3009000,TeamGame,FieldGoalsPercentage,decimal,32,True,Total field goal percentage,True,True
+3009000,TeamGame,EffectiveFieldGoalsPercentage,decimal,32,True,Total effective field goals percentage,True,True
+3009000,TeamGame,TwoPointersMade,decimal,32,True,Total two pointers made,True,True
+3009000,TeamGame,TwoPointersAttempted,decimal,32,True,Total two pointers attempted,True,True
+3009000,TeamGame,TwoPointersPercentage,decimal,32,True,Total two pointers percentage,True,True
+3009000,TeamGame,ThreePointersMade,decimal,32,True,Total three pointers made,True,True
+3009000,TeamGame,ThreePointersAttempted,decimal,32,True,Total three pointers attempted,True,True
+3009000,TeamGame,ThreePointersPercentage,decimal,32,True,Total three pointers percentage,True,True
+3009000,TeamGame,FreeThrowsMade,decimal,32,True,Total free throws made,True,True
+3009000,TeamGame,FreeThrowsAttempted,decimal,32,True,Total free throws attempted,True,True
+3009000,TeamGame,FreeThrowsPercentage,decimal,32,True,Total free throws percentage,True,True
+3009000,TeamGame,OffensiveRebounds,decimal,32,True,Total offensive rebounds,True,True
+3009000,TeamGame,DefensiveRebounds,decimal,32,True,Total defensive rebounds,True,True
+3009000,TeamGame,Rebounds,decimal,32,True,Total rebounds,True,True
+3009000,TeamGame,OffensiveReboundsPercentage,decimal,32,True,Total offensive rebounds percentage,True,True
+3009000,TeamGame,DefensiveReboundsPercentage,decimal,32,True,Total defensive rebounds percentage,True,True
+3009000,TeamGame,TotalReboundsPercentage,decimal,32,True,The player/team total rebounds percentage,True,True
+3009000,TeamGame,Assists,decimal,32,True,Total assists,True,True
+3009000,TeamGame,Steals,decimal,32,True,Total steals,True,True
+3009000,TeamGame,BlockedShots,decimal,32,True,Total blocked shots,True,True
+3009000,TeamGame,Turnovers,decimal,32,True,Total turnovers,True,True
+3009000,TeamGame,PersonalFouls,decimal,32,True,Total personal fouls,True,True
+3009000,TeamGame,Points,decimal,32,True,Total points scored,True,True
+3009000,TeamGame,TrueShootingAttempts,decimal,32,True,The player's true shooting attempts as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3009000,TeamGame,TrueShootingPercentage,decimal,32,True,The player's true shooting percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3009000,TeamGame,PlayerEfficiencyRating,decimal,32,True,The player's linear weight efficiency rating as defined here: http://bleacherreport.com/articles/113144-cracking-the-code-how-to-calculate-hollingers-per-without-all-the-mess,True,True
+3009000,TeamGame,AssistsPercentage,decimal,32,True,The player's assist percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3009000,TeamGame,StealsPercentage,decimal,32,True,The player's steal percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3009000,TeamGame,BlocksPercentage,decimal,32,True,The player's block percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3009000,TeamGame,TurnOversPercentage,decimal,32,True,The player's turnover percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3009000,TeamGame,UsageRatePercentage,decimal,32,True,The player's usage rate percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3009000,TeamGame,FantasyPointsFanDuel,decimal,32,True,Total FanDuel daily fantasy points scored,True,True
+3009000,TeamGame,FantasyPointsDraftKings,decimal,32,True,Total DraftKings daily fantasy points scored,True,True
+3009000,TeamGame,FantasyPointsYahoo,decimal,32,True,Total Yahoo daily fantasy points scored,True,True
+3009000,TeamGame,PlusMinus,decimal,32,True,Total plus minus,True,True
+3009000,TeamGame,DoubleDoubles,decimal,32,True,Total double-doubles scored,True,True
+3009000,TeamGame,TripleDoubles,decimal,32,True,Total triple-doubles scored,True,True
+3009000,TeamGame,FantasyPointsFantasyDraft,decimal,32,True,Total FantasyDraft daily fantasy points scored,True,True
+3009000,TeamGame,IsClosed,boolean,,False,Indicates whether the game is over and the stats for this player have been verified and closed out.,True,False
+3010000,PlayerSeason,StatID,integer,32,False,The unique ID of the stat,True,False
+3010000,PlayerSeason,TeamID,integer,32,True,The unique ID of the player's team,True,False
+3010000,PlayerSeason,PlayerID,integer,32,True,Unique ID assigned to each player that stays with them throughout their career,True,False
+3010000,PlayerSeason,SeasonType,integer,32,True,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Postseason; 4=Offseason; 5=AllStar).,True,False
+3010000,PlayerSeason,Season,integer,32,True,The NBA regular season for which these totals apply,True,False
+3010000,PlayerSeason,Name,string,50,True,Player's name,True,False
+3010000,PlayerSeason,Team,string,10,True,The abbreviation of the Team,True,False
+3010000,PlayerSeason,Position,string,10,True,Player's position in the starting lineup (if started); otherwise the position he substituted for,True,False
+3010000,PlayerSeason,Started,integer,32,True,Number of games started,True,False
+3010000,PlayerSeason,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3010000,PlayerSeason,Updated,datetime,,True,The timestamp of when the record was last updated (US Eastern Time),True,False
+3010000,PlayerSeason,Games,integer,32,True,The number of games played,True,False
+3010000,PlayerSeason,FantasyPoints,decimal,32,True,Total fantasy points,True,True
+3010000,PlayerSeason,Minutes,integer,32,True,Total number of minutes played,True,True
+3010000,PlayerSeason,Seconds,integer,32,True,Total number of seconds played,True,True
+3010000,PlayerSeason,FieldGoalsMade,decimal,32,True,Total number of field goals made,True,True
+3010000,PlayerSeason,FieldGoalsAttempted,decimal,32,True,Total number of field goals attempted,True,True
+3010000,PlayerSeason,FieldGoalsPercentage,decimal,32,True,Total field goal percentage,True,True
+3010000,PlayerSeason,EffectiveFieldGoalsPercentage,decimal,32,True,Total effective field goals percentage,True,True
+3010000,PlayerSeason,TwoPointersMade,decimal,32,True,Total two pointers made,True,True
+3010000,PlayerSeason,TwoPointersAttempted,decimal,32,True,Total two pointers attempted,True,True
+3010000,PlayerSeason,TwoPointersPercentage,decimal,32,True,Total two pointers percentage,True,True
+3010000,PlayerSeason,ThreePointersMade,decimal,32,True,Total three pointers made,True,True
+3010000,PlayerSeason,ThreePointersAttempted,decimal,32,True,Total three pointers attempted,True,True
+3010000,PlayerSeason,ThreePointersPercentage,decimal,32,True,Total three pointers percentage,True,True
+3010000,PlayerSeason,FreeThrowsMade,decimal,32,True,Total free throws made,True,True
+3010000,PlayerSeason,FreeThrowsAttempted,decimal,32,True,Total free throws attempted,True,True
+3010000,PlayerSeason,FreeThrowsPercentage,decimal,32,True,Total free throws percentage,True,True
+3010000,PlayerSeason,OffensiveRebounds,decimal,32,True,Total offensive rebounds,True,True
+3010000,PlayerSeason,DefensiveRebounds,decimal,32,True,Total defensive rebounds,True,True
+3010000,PlayerSeason,Rebounds,decimal,32,True,Total rebounds,True,True
+3010000,PlayerSeason,OffensiveReboundsPercentage,decimal,32,True,Total offensive rebounds percentage,True,True
+3010000,PlayerSeason,DefensiveReboundsPercentage,decimal,32,True,Total defensive rebounds percentage,True,True
+3010000,PlayerSeason,TotalReboundsPercentage,decimal,32,True,The player/team total rebounds percentage,True,True
+3010000,PlayerSeason,Assists,decimal,32,True,Total assists,True,True
+3010000,PlayerSeason,Steals,decimal,32,True,Total steals,True,True
+3010000,PlayerSeason,BlockedShots,decimal,32,True,Total blocked shots,True,True
+3010000,PlayerSeason,Turnovers,decimal,32,True,Total turnovers,True,True
+3010000,PlayerSeason,PersonalFouls,decimal,32,True,Total personal fouls,True,True
+3010000,PlayerSeason,Points,decimal,32,True,Total points scored,True,True
+3010000,PlayerSeason,TrueShootingAttempts,decimal,32,True,The player's true shooting attempts as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3010000,PlayerSeason,TrueShootingPercentage,decimal,32,True,The player's true shooting percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3010000,PlayerSeason,PlayerEfficiencyRating,decimal,32,True,The player's linear weight efficiency rating as defined here: http://bleacherreport.com/articles/113144-cracking-the-code-how-to-calculate-hollingers-per-without-all-the-mess,True,True
+3010000,PlayerSeason,AssistsPercentage,decimal,32,True,The player's assist percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3010000,PlayerSeason,StealsPercentage,decimal,32,True,The player's steal percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3010000,PlayerSeason,BlocksPercentage,decimal,32,True,The player's block percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3010000,PlayerSeason,TurnOversPercentage,decimal,32,True,The player's turnover percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3010000,PlayerSeason,UsageRatePercentage,decimal,32,True,The player's usage rate percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3010000,PlayerSeason,FantasyPointsFanDuel,decimal,32,True,Total FanDuel daily fantasy points scored,True,True
+3010000,PlayerSeason,FantasyPointsDraftKings,decimal,32,True,Total DraftKings daily fantasy points scored,True,True
+3010000,PlayerSeason,FantasyPointsYahoo,decimal,32,True,Total Yahoo daily fantasy points scored,True,True
+3010000,PlayerSeason,PlusMinus,decimal,32,True,Total plus minus,True,True
+3010000,PlayerSeason,DoubleDoubles,decimal,32,True,Total double-doubles scored,True,True
+3010000,PlayerSeason,TripleDoubles,decimal,32,True,Total triple-doubles scored,True,True
+3010000,PlayerSeason,FantasyPointsFantasyDraft,decimal,32,True,Total FantasyDraft daily fantasy points scored,True,True
+3010000,PlayerSeason,IsClosed,boolean,,False,Indicates whether the game is over and the stats for this player have been verified and closed out.,True,False
+3011000,TeamSeason,StatID,integer,32,False,The unique ID of the stat,True,False
+3011000,TeamSeason,TeamID,integer,32,True,The unique ID of the team,True,False
+3011000,TeamSeason,SeasonType,integer,32,True,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Postseason; 4=Offseason; 5=AllStar).,True,False
+3011000,TeamSeason,Season,integer,32,True,The NBA regular season for which these totals apply,True,False
+3011000,TeamSeason,Name,string,50,True,Team name,True,False
+3011000,TeamSeason,Team,string,10,True,The abbreviation of the Team,True,False
+3011000,TeamSeason,Wins,integer,32,True,Total number of wins,True,False
+3011000,TeamSeason,Losses,integer,32,True,Total number of losses,True,False
+3011000,TeamSeason,OpponentPosition,string,10,True,Indicates which position is included in opponent stats that are aggregated together,True,False
+3011000,TeamSeason,Possessions,decimal,32,True,The team's estimated number of possessions as defined by the formula here: http://www.basketball-reference.com/about/glossary.html,True,True
+3011000,TeamSeason,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3011000,TeamSeason,OpponentStat,OpponentSeason,,True,The aggregated season stats for this team's opponents,True,False
+3011000,TeamSeason,Updated,datetime,,True,The timestamp of when the record was last updated (US Eastern Time),True,False
+3011000,TeamSeason,Games,integer,32,True,The number of games played,True,False
+3011000,TeamSeason,FantasyPoints,decimal,32,True,Total fantasy points,True,True
+3011000,TeamSeason,Minutes,integer,32,True,Total number of minutes played,True,True
+3011000,TeamSeason,Seconds,integer,32,True,Total number of seconds played,True,True
+3011000,TeamSeason,FieldGoalsMade,decimal,32,True,Total number of field goals made,True,True
+3011000,TeamSeason,FieldGoalsAttempted,decimal,32,True,Total number of field goals attempted,True,True
+3011000,TeamSeason,FieldGoalsPercentage,decimal,32,True,Total field goal percentage,True,True
+3011000,TeamSeason,EffectiveFieldGoalsPercentage,decimal,32,True,Total effective field goals percentage,True,True
+3011000,TeamSeason,TwoPointersMade,decimal,32,True,Total two pointers made,True,True
+3011000,TeamSeason,TwoPointersAttempted,decimal,32,True,Total two pointers attempted,True,True
+3011000,TeamSeason,TwoPointersPercentage,decimal,32,True,Total two pointers percentage,True,True
+3011000,TeamSeason,ThreePointersMade,decimal,32,True,Total three pointers made,True,True
+3011000,TeamSeason,ThreePointersAttempted,decimal,32,True,Total three pointers attempted,True,True
+3011000,TeamSeason,ThreePointersPercentage,decimal,32,True,Total three pointers percentage,True,True
+3011000,TeamSeason,FreeThrowsMade,decimal,32,True,Total free throws made,True,True
+3011000,TeamSeason,FreeThrowsAttempted,decimal,32,True,Total free throws attempted,True,True
+3011000,TeamSeason,FreeThrowsPercentage,decimal,32,True,Total free throws percentage,True,True
+3011000,TeamSeason,OffensiveRebounds,decimal,32,True,Total offensive rebounds,True,True
+3011000,TeamSeason,DefensiveRebounds,decimal,32,True,Total defensive rebounds,True,True
+3011000,TeamSeason,Rebounds,decimal,32,True,Total rebounds,True,True
+3011000,TeamSeason,OffensiveReboundsPercentage,decimal,32,True,Total offensive rebounds percentage,True,True
+3011000,TeamSeason,DefensiveReboundsPercentage,decimal,32,True,Total defensive rebounds percentage,True,True
+3011000,TeamSeason,TotalReboundsPercentage,decimal,32,True,The player/team total rebounds percentage,True,True
+3011000,TeamSeason,Assists,decimal,32,True,Total assists,True,True
+3011000,TeamSeason,Steals,decimal,32,True,Total steals,True,True
+3011000,TeamSeason,BlockedShots,decimal,32,True,Total blocked shots,True,True
+3011000,TeamSeason,Turnovers,decimal,32,True,Total turnovers,True,True
+3011000,TeamSeason,PersonalFouls,decimal,32,True,Total personal fouls,True,True
+3011000,TeamSeason,Points,decimal,32,True,Total points scored,True,True
+3011000,TeamSeason,TrueShootingAttempts,decimal,32,True,The player's true shooting attempts as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3011000,TeamSeason,TrueShootingPercentage,decimal,32,True,The player's true shooting percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3011000,TeamSeason,PlayerEfficiencyRating,decimal,32,True,The player's linear weight efficiency rating as defined here: http://bleacherreport.com/articles/113144-cracking-the-code-how-to-calculate-hollingers-per-without-all-the-mess,True,True
+3011000,TeamSeason,AssistsPercentage,decimal,32,True,The player's assist percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3011000,TeamSeason,StealsPercentage,decimal,32,True,The player's steal percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3011000,TeamSeason,BlocksPercentage,decimal,32,True,The player's block percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3011000,TeamSeason,TurnOversPercentage,decimal,32,True,The player's turnover percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3011000,TeamSeason,UsageRatePercentage,decimal,32,True,The player's usage rate percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3011000,TeamSeason,FantasyPointsFanDuel,decimal,32,True,Total FanDuel daily fantasy points scored,True,True
+3011000,TeamSeason,FantasyPointsDraftKings,decimal,32,True,Total DraftKings daily fantasy points scored,True,True
+3011000,TeamSeason,FantasyPointsYahoo,decimal,32,True,Total Yahoo daily fantasy points scored,True,True
+3011000,TeamSeason,PlusMinus,decimal,32,True,Total plus minus,True,True
+3011000,TeamSeason,DoubleDoubles,decimal,32,True,Total double-doubles scored,True,True
+3011000,TeamSeason,TripleDoubles,decimal,32,True,Total triple-doubles scored,True,True
+3011000,TeamSeason,FantasyPointsFantasyDraft,decimal,32,True,Total FantasyDraft daily fantasy points scored,True,True
+3011000,TeamSeason,IsClosed,boolean,,False,Indicates whether the game is over and the stats for this player have been verified and closed out.,True,False
+3012000,News,NewsID,integer,32,False,Unique ID of news story,True,False
+3012000,News,Source,string,50,True,The source of the story (FantasyData; RotoBaller; NBCSports.com; etc.),True,False
+3012000,News,Updated,datetime,,False,The date/time that the content was published (UTC time zone),True,False
+3012000,News,TimeAgo,string,50,True,A description of how long ago this content was published,True,False
+3012000,News,Title,string,100,True,The brief title of the news (typically less than 100 characters),True,False
+3012000,News,Content,string,5000,True,The full body content of the story,True,False
+3012000,News,Url,string,250,True,The url of the full story,True,False
+3012000,News,TermsOfUse,string,500,True,The terms of use with using this news item; credit must be given to the originator of the story when specified in the terms of use,True,False
+3012000,News,Author,string,50,True,The author of the content,True,False
+3012000,News,Categories,string,100,True,Comma delimited meta tags describing the categories of this content. Possible tags include: Top Headlines; Breaking News; Injury; Sit/Start; Waiver Wire; Risers; Fallers; Lineups; Transactions; Free Agents; Prospects/Rookies; Game Recap; Matchup Outlook,True,False
+3012000,News,PlayerID,integer,32,True,The PlayerID of the player who relates to this story,True,False
+3012000,News,TeamID,integer,32,True,The TeamID of the team that relates to this story,True,False
+3012000,News,Team,string,10,True,The team that relates to this story,True,False
+3012000,News,PlayerID2,integer,32,True,The PlayerID of the player who relates to this story,True,False
+3012000,News,TeamID2,integer,32,True,The TeamID of the team that relates to this story,True,False
+3012000,News,Team2,string,10,True,The team that relates to this story,True,False
+3013000,PlayerGameProjection,StatID,integer,32,False,The unique ID of the stat,True,False
+3013000,PlayerGameProjection,TeamID,integer,32,True,The unique ID of the team,True,False
+3013000,PlayerGameProjection,PlayerID,integer,32,True,Unique ID assigned to each player that stays with them throughout their career,True,False
+3013000,PlayerGameProjection,SeasonType,integer,32,True,The season type of the timeframe (1=Regular Season; 2=Preseason; 3=Postseason),True,False
+3013000,PlayerGameProjection,Season,integer,32,True,The NBA season of the game,True,False
+3013000,PlayerGameProjection,Name,string,50,True,Player's name,True,False
+3013000,PlayerGameProjection,Team,string,10,True,The abbreviation of the Team,True,False
+3013000,PlayerGameProjection,Position,string,10,True,The player's position associated with the given game or season. Possible values: C; F; FC; G; GF; PF; PG; SF; SG,True,False
+3013000,PlayerGameProjection,Started,integer,32,True,Whether the player started,True,False
+3013000,PlayerGameProjection,FanDuelSalary,integer,32,True,The player's salary for FanDuel daily fantasy contests.,True,True
+3013000,PlayerGameProjection,DraftKingsSalary,integer,32,True,The player's salary for DraftKings daily fantasy contests.,True,True
+3013000,PlayerGameProjection,FantasyDataSalary,integer,32,True,The player's salary as calculated by FantasyData.  Based on the same salary cap as DraftKings contests ($50;000).,True,True
+3013000,PlayerGameProjection,YahooSalary,integer,32,True,The player's salary for Yahoo daily fantasy contests.,True,True
+3013000,PlayerGameProjection,InjuryStatus,string,50,True,Indicates the player's injury status. Possible values include: Probable; Questionable; Doubtful; Out,True,True
+3013000,PlayerGameProjection,InjuryBodyPart,string,50,True,The body part that is injured (Knee; Groin; Calf; Hamstring; etc.),True,True
+3013000,PlayerGameProjection,InjuryStartDate,date,,True,The day that the injury started or first discovered.,True,False
+3013000,PlayerGameProjection,InjuryNotes,string,250,True,Brief description of the player's injury and expected availability.,True,True
+3013000,PlayerGameProjection,FanDuelPosition,string,10,True,The player's eligible position in FanDuel's daily fantasy sports platform.,True,False
+3013000,PlayerGameProjection,DraftKingsPosition,string,10,True,The player's eligible position in DraftKings' daily fantasy sports platform.,True,False
+3013000,PlayerGameProjection,YahooPosition,string,10,True,The player's eligible position in Yahoo's daily fantasy sports platform.,True,False
+3013000,PlayerGameProjection,OpponentRank,integer,32,True,The ranking of the player's opponent with regards to fantasy points allowed.,True,True
+3013000,PlayerGameProjection,OpponentPositionRank,integer,32,True,The ranking of the player's opponent by position with regards to fantasy points allowed.,True,True
+3013000,PlayerGameProjection,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3013000,PlayerGameProjection,FantasyDraftSalary,integer,32,True,The player's salary for Fantasy Draft daily fantasy contests.,True,True
+3013000,PlayerGameProjection,FantasyDraftPosition,string,10,True,The player's eligible position in Fantasy Drafts daily fantasy sports platform.,True,True
+3013000,PlayerGameProjection,GameID,integer,32,True,The unique ID of this game,True,False
+3013000,PlayerGameProjection,OpponentID,integer,32,True,The unique ID of the team's opponent,True,False
+3013000,PlayerGameProjection,Opponent,string,10,True,The name of the opponent ,True,False
+3013000,PlayerGameProjection,Day,date,,True,The day of the game,True,False
+3013000,PlayerGameProjection,DateTime,datetime,,True,The date and time of the game,True,False
+3013000,PlayerGameProjection,HomeOrAway,string,4,True,Whether the team is home or away,True,False
+3013000,PlayerGameProjection,IsGameOver,boolean,,False,Whether the game is over (true/false),True,False
+3013000,PlayerGameProjection,GlobalGameID,integer,32,True,A globally unique ID for this game. This value is guaranteed to be unique across all sports/leagues.,False,False
+3013000,PlayerGameProjection,GlobalOpponentID,integer,32,True,A globally unique ID for this opponent. This value is guaranteed to be unique across all sports/leagues.,True,False
+3013000,PlayerGameProjection,Updated,datetime,,True,The timestamp of when the record was last updated (US Eastern Time),True,False
+3013000,PlayerGameProjection,Games,integer,32,True,The number of games played,True,False
+3013000,PlayerGameProjection,FantasyPoints,decimal,32,True,Total fantasy points,True,True
+3013000,PlayerGameProjection,Minutes,integer,32,True,Total number of minutes played,True,True
+3013000,PlayerGameProjection,Seconds,integer,32,True,Total number of seconds played,True,True
+3013000,PlayerGameProjection,FieldGoalsMade,decimal,32,True,Total number of field goals made,True,True
+3013000,PlayerGameProjection,FieldGoalsAttempted,decimal,32,True,Total number of field goals attempted,True,True
+3013000,PlayerGameProjection,FieldGoalsPercentage,decimal,32,True,Total field goal percentage,True,True
+3013000,PlayerGameProjection,EffectiveFieldGoalsPercentage,decimal,32,True,Total effective field goals percentage,True,True
+3013000,PlayerGameProjection,TwoPointersMade,decimal,32,True,Total two pointers made,True,True
+3013000,PlayerGameProjection,TwoPointersAttempted,decimal,32,True,Total two pointers attempted,True,True
+3013000,PlayerGameProjection,TwoPointersPercentage,decimal,32,True,Total two pointers percentage,True,True
+3013000,PlayerGameProjection,ThreePointersMade,decimal,32,True,Total three pointers made,True,True
+3013000,PlayerGameProjection,ThreePointersAttempted,decimal,32,True,Total three pointers attempted,True,True
+3013000,PlayerGameProjection,ThreePointersPercentage,decimal,32,True,Total three pointers percentage,True,True
+3013000,PlayerGameProjection,FreeThrowsMade,decimal,32,True,Total free throws made,True,True
+3013000,PlayerGameProjection,FreeThrowsAttempted,decimal,32,True,Total free throws attempted,True,True
+3013000,PlayerGameProjection,FreeThrowsPercentage,decimal,32,True,Total free throws percentage,True,True
+3013000,PlayerGameProjection,OffensiveRebounds,decimal,32,True,Total offensive rebounds,True,True
+3013000,PlayerGameProjection,DefensiveRebounds,decimal,32,True,Total defensive rebounds,True,True
+3013000,PlayerGameProjection,Rebounds,decimal,32,True,Total rebounds,True,True
+3013000,PlayerGameProjection,OffensiveReboundsPercentage,decimal,32,True,Total offensive rebounds percentage,True,True
+3013000,PlayerGameProjection,DefensiveReboundsPercentage,decimal,32,True,Total defensive rebounds percentage,True,True
+3013000,PlayerGameProjection,TotalReboundsPercentage,decimal,32,True,The player/team total rebounds percentage,True,True
+3013000,PlayerGameProjection,Assists,decimal,32,True,Total assists,True,True
+3013000,PlayerGameProjection,Steals,decimal,32,True,Total steals,True,True
+3013000,PlayerGameProjection,BlockedShots,decimal,32,True,Total blocked shots,True,True
+3013000,PlayerGameProjection,Turnovers,decimal,32,True,Total turnovers,True,True
+3013000,PlayerGameProjection,PersonalFouls,decimal,32,True,Total personal fouls,True,True
+3013000,PlayerGameProjection,Points,decimal,32,True,Total points scored,True,True
+3013000,PlayerGameProjection,TrueShootingAttempts,decimal,32,True,The player's true shooting attempts as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3013000,PlayerGameProjection,TrueShootingPercentage,decimal,32,True,The player's true shooting percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3013000,PlayerGameProjection,PlayerEfficiencyRating,decimal,32,True,The player's linear weight efficiency rating as defined here: http://bleacherreport.com/articles/113144-cracking-the-code-how-to-calculate-hollingers-per-without-all-the-mess,True,True
+3013000,PlayerGameProjection,AssistsPercentage,decimal,32,True,The player's assist percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3013000,PlayerGameProjection,StealsPercentage,decimal,32,True,The player's steal percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3013000,PlayerGameProjection,BlocksPercentage,decimal,32,True,The player's block percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3013000,PlayerGameProjection,TurnOversPercentage,decimal,32,True,The player's turnover percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3013000,PlayerGameProjection,UsageRatePercentage,decimal,32,True,The player's usage rate percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3013000,PlayerGameProjection,FantasyPointsFanDuel,decimal,32,True,Total FanDuel daily fantasy points scored,True,True
+3013000,PlayerGameProjection,FantasyPointsDraftKings,decimal,32,True,Total DraftKings daily fantasy points scored,True,True
+3013000,PlayerGameProjection,FantasyPointsYahoo,decimal,32,True,Total Yahoo daily fantasy points scored,True,True
+3013000,PlayerGameProjection,PlusMinus,decimal,32,True,Total plus minus,True,True
+3013000,PlayerGameProjection,DoubleDoubles,decimal,32,True,Total double-doubles scored,True,True
+3013000,PlayerGameProjection,TripleDoubles,decimal,32,True,Total triple-doubles scored,True,True
+3013000,PlayerGameProjection,FantasyPointsFantasyDraft,decimal,32,True,Total FantasyDraft daily fantasy points scored,True,True
+3013000,PlayerGameProjection,IsClosed,boolean,,False,Indicates whether the game is over and the stats for this player have been verified and closed out.,True,False
+3014000,PlayerSeasonProjection,StatID,integer,32,False,The unique ID of the stat,True,False
+3014000,PlayerSeasonProjection,TeamID,integer,32,True,The unique ID of the player's team,True,False
+3014000,PlayerSeasonProjection,PlayerID,integer,32,True,Unique ID assigned to each player that stays with them throughout their career,True,False
+3014000,PlayerSeasonProjection,SeasonType,integer,32,True,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Postseason; 4=Offseason; 5=AllStar).,True,False
+3014000,PlayerSeasonProjection,Season,integer,32,True,The NBA regular season for which these totals apply,True,False
+3014000,PlayerSeasonProjection,Name,string,50,True,Player's name,True,False
+3014000,PlayerSeasonProjection,Team,string,10,True,The abbreviation of the Team,True,False
+3014000,PlayerSeasonProjection,Position,string,10,True,Player's position in the starting lineup (if started); otherwise the position he substituted for,True,False
+3014000,PlayerSeasonProjection,Started,integer,32,True,Number of games started,True,False
+3014000,PlayerSeasonProjection,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3014000,PlayerSeasonProjection,Updated,datetime,,True,The timestamp of when the record was last updated (US Eastern Time),True,False
+3014000,PlayerSeasonProjection,Games,integer,32,True,The number of games played,True,False
+3014000,PlayerSeasonProjection,FantasyPoints,decimal,32,True,Total fantasy points,True,True
+3014000,PlayerSeasonProjection,Minutes,integer,32,True,Total number of minutes played,True,True
+3014000,PlayerSeasonProjection,Seconds,integer,32,True,Total number of seconds played,True,True
+3014000,PlayerSeasonProjection,FieldGoalsMade,decimal,32,True,Total number of field goals made,True,True
+3014000,PlayerSeasonProjection,FieldGoalsAttempted,decimal,32,True,Total number of field goals attempted,True,True
+3014000,PlayerSeasonProjection,FieldGoalsPercentage,decimal,32,True,Total field goal percentage,True,True
+3014000,PlayerSeasonProjection,EffectiveFieldGoalsPercentage,decimal,32,True,Total effective field goals percentage,True,True
+3014000,PlayerSeasonProjection,TwoPointersMade,decimal,32,True,Total two pointers made,True,True
+3014000,PlayerSeasonProjection,TwoPointersAttempted,decimal,32,True,Total two pointers attempted,True,True
+3014000,PlayerSeasonProjection,TwoPointersPercentage,decimal,32,True,Total two pointers percentage,True,True
+3014000,PlayerSeasonProjection,ThreePointersMade,decimal,32,True,Total three pointers made,True,True
+3014000,PlayerSeasonProjection,ThreePointersAttempted,decimal,32,True,Total three pointers attempted,True,True
+3014000,PlayerSeasonProjection,ThreePointersPercentage,decimal,32,True,Total three pointers percentage,True,True
+3014000,PlayerSeasonProjection,FreeThrowsMade,decimal,32,True,Total free throws made,True,True
+3014000,PlayerSeasonProjection,FreeThrowsAttempted,decimal,32,True,Total free throws attempted,True,True
+3014000,PlayerSeasonProjection,FreeThrowsPercentage,decimal,32,True,Total free throws percentage,True,True
+3014000,PlayerSeasonProjection,OffensiveRebounds,decimal,32,True,Total offensive rebounds,True,True
+3014000,PlayerSeasonProjection,DefensiveRebounds,decimal,32,True,Total defensive rebounds,True,True
+3014000,PlayerSeasonProjection,Rebounds,decimal,32,True,Total rebounds,True,True
+3014000,PlayerSeasonProjection,OffensiveReboundsPercentage,decimal,32,True,Total offensive rebounds percentage,True,True
+3014000,PlayerSeasonProjection,DefensiveReboundsPercentage,decimal,32,True,Total defensive rebounds percentage,True,True
+3014000,PlayerSeasonProjection,TotalReboundsPercentage,decimal,32,True,The player/team total rebounds percentage,True,True
+3014000,PlayerSeasonProjection,Assists,decimal,32,True,Total assists,True,True
+3014000,PlayerSeasonProjection,Steals,decimal,32,True,Total steals,True,True
+3014000,PlayerSeasonProjection,BlockedShots,decimal,32,True,Total blocked shots,True,True
+3014000,PlayerSeasonProjection,Turnovers,decimal,32,True,Total turnovers,True,True
+3014000,PlayerSeasonProjection,PersonalFouls,decimal,32,True,Total personal fouls,True,True
+3014000,PlayerSeasonProjection,Points,decimal,32,True,Total points scored,True,True
+3014000,PlayerSeasonProjection,TrueShootingAttempts,decimal,32,True,The player's true shooting attempts as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3014000,PlayerSeasonProjection,TrueShootingPercentage,decimal,32,True,The player's true shooting percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3014000,PlayerSeasonProjection,PlayerEfficiencyRating,decimal,32,True,The player's linear weight efficiency rating as defined here: http://bleacherreport.com/articles/113144-cracking-the-code-how-to-calculate-hollingers-per-without-all-the-mess,True,True
+3014000,PlayerSeasonProjection,AssistsPercentage,decimal,32,True,The player's assist percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3014000,PlayerSeasonProjection,StealsPercentage,decimal,32,True,The player's steal percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3014000,PlayerSeasonProjection,BlocksPercentage,decimal,32,True,The player's block percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3014000,PlayerSeasonProjection,TurnOversPercentage,decimal,32,True,The player's turnover percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3014000,PlayerSeasonProjection,UsageRatePercentage,decimal,32,True,The player's usage rate percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3014000,PlayerSeasonProjection,FantasyPointsFanDuel,decimal,32,True,Total FanDuel daily fantasy points scored,True,True
+3014000,PlayerSeasonProjection,FantasyPointsDraftKings,decimal,32,True,Total DraftKings daily fantasy points scored,True,True
+3014000,PlayerSeasonProjection,FantasyPointsYahoo,decimal,32,True,Total Yahoo daily fantasy points scored,True,True
+3014000,PlayerSeasonProjection,PlusMinus,decimal,32,True,Total plus minus,True,True
+3014000,PlayerSeasonProjection,DoubleDoubles,decimal,32,True,Total double-doubles scored,True,True
+3014000,PlayerSeasonProjection,TripleDoubles,decimal,32,True,Total triple-doubles scored,True,True
+3014000,PlayerSeasonProjection,FantasyPointsFantasyDraft,decimal,32,True,Total FantasyDraft daily fantasy points scored,True,True
+3014000,PlayerSeasonProjection,IsClosed,boolean,,False,Indicates whether the game is over and the stats for this player have been verified and closed out.,True,False
+3016000,Season,Season,integer,32,False,The NBA regular season for which these totals apply,True,False
+3016000,Season,StartYear,integer,32,False,The year in which the season started,True,False
+3016000,Season,EndYear,integer,32,False,The year in which the season ended,True,False
+3016000,Season,Description,string,10,True,The description of the season for display purposes (possible values include: 2017-18; 2018-19; etc),True,False
+3016000,Season,RegularSeasonStartDate,date,,True,The start date of the regular season,True,False
+3016000,Season,PostSeasonStartDate,date,,True,The start date of the postseason,True,False
+3016000,Season,SeasonType,string,10,True,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Postseason; 4=Offseason; 5=AllStar).,True,False
+3016000,Season,ApiSeason,string,10,True,The string to pass into subsequent API calls in the season parameter,True,False
+3017000,Standing,Season,integer,32,False,The NBA regular season for which these totals apply,True,False
+3017000,Standing,SeasonType,integer,32,False,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Postseason; 4=Offseason; 5=AllStar).,True,False
+3017000,Standing,TeamID,Integer,32,False,The unique ID for the team,True,False
+3017000,Standing,Key,string,10,False,Whether or not the team is active,True,False
+3017000,Standing,City,string,50,True,The name of the city,True,False
+3017000,Standing,Name,string,50,True,The full name of the team,True,False
+3017000,Standing,Conference,string,20,True,The conference of the team (Eastern or Western),True,False
+3017000,Standing,Division,string,20,True,The division of the team (e.g. Atlantic; Central; Southeast; etc.),True,False
+3017000,Standing,Wins,integer,32,True,Regular season wins,True,False
+3017000,Standing,Losses,integer,32,True,Regular season losses,True,False
+3017000,Standing,Percentage,decimal,32,True,Winning percentage,True,False
+3017000,Standing,ConferenceWins,integer,32,True,Regular season conference wins,True,False
+3017000,Standing,ConferenceLosses,integer,32,True,Regular season conference losses,True,False
+3017000,Standing,DivisionWins,integer,32,True,Regular season division wins,True,False
+3017000,Standing,DivisionLosses,integer,32,True,Regular season division losses,True,False
+3017000,Standing,HomeWins,integer,32,True,Regular season wins at home,True,False
+3017000,Standing,HomeLosses,integer,32,True,Regular season losses at home,True,False
+3017000,Standing,AwayWins,integer,32,True,Regular season wins on the road,True,False
+3017000,Standing,AwayLosses,integer,32,True,Regular season losses on the road,True,False
+3017000,Standing,LastTenWins,integer,32,True,Regular season wins in last 10 games,True,False
+3017000,Standing,LastTenLosses,integer,32,True,Regular season losses in last 10 games,True,False
+3017000,Standing,PointsPerGameFor,decimal,32,True,Average Points Scored,True,False
+3017000,Standing,PointsPerGameAgainst,decimal,32,True,Average Points Scored Against,True,False
+3017000,Standing,Streak,integer,32,True,Winning or Losing Streak,True,False
+3017000,Standing,GamesBack,decimal,32,True,Games behind the leader,True,False
+3017000,Standing,StreakDescription,string,10,True,Winning or Losing Streak written in the form W5 or L1,True,False
+3017000,Standing,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3018000,Play,PlayID,integer,32,False,The unique identifier of the play.,True,False
+3018000,Play,QuarterID,integer,32,False,The unique identifier of the Quarter that this play occurred in.,True,False
+3018000,Play,QuarterName,string,10,False,The name of the Quarter that this play occurred in.,True,False
+3018000,Play,Sequence,integer,32,False,The order in which this play happened over the course of the game.,True,False
+3018000,Play,TimeRemainingMinutes,integer,32,True,The number of minutes remaining in the Quarter when this play completed.,True,False
+3018000,Play,TimeRemainingSeconds,integer,32,True,The number of seconds remaining in the Quarter when this play completed.,True,False
+3018000,Play,AwayTeamScore,integer,32,True,The score of the away team after this play completed.,True,True
+3018000,Play,HomeTeamScore,integer,32,True,The score of the home team after this play completed.,True,True
+3018000,Play,PotentialPoints,integer,32,True,The points that would have been potentially scored by the shot attempt (if any).,True,True
+3018000,Play,Points,integer,32,True,The points scores by the shot attempt (if any).,True,True
+3018000,Play,ShotMade,boolean,,True,Whether the shot was made (if any).,True,True
+3018000,Play,Category,string,20,True,The category the play. Possible values: Period; Timeout; JumpBall; Shot; Rebound; Foul; Substitution,True,True
+3018000,Play,Type,string,20,True,The type of the play. Possible values: None; Period; Timeout; JumpBall; FieldGoalMade; FieldGoalMissed; FreeThrowMade; FreeThrowMissed; Rebound; Steal; Turnover; Foul; PersonalFoul; ShootingFoul; OffensiveFoul; LooseBallFoul; TechnicalFoul; FlagrantFoul; Traveling; Palming; Goaltending; KickedBall; LaneViolation; DelayOfGame; Substitution,True,True
+3018000,Play,TeamID,integer,32,True,The TeamID of the team associated with this play.,True,False
+3018000,Play,Team,string,10,True,The Team Key of the team associated with this play.,True,False
+3018000,Play,OpponentID,integer,32,True,The TeamID of the opponent associated with this play.,True,False
+3018000,Play,Opponent,string,10,True,The Team Key of the opponent associated with this play.,True,False
+3018000,Play,ReceivingTeamID,integer,32,True,The TeamID of the team that won the jump ball.,True,False
+3018000,Play,ReceivingTeam,string,10,True,The Team Key of the team that won the jump ball.,True,False
+3018000,Play,Description,string,250,True,The description of the play.,True,True
+3018000,Play,PlayerID,integer,32,True,The PlayerID of the primary player on this play (if any).,True,False
+3018000,Play,AssistedByPlayerID,integer,32,True,The PlayerID of the player who got a field goal assist on this play (if any).,True,False
+3018000,Play,BlockedByPlayerID,integer,32,True,The PlayerID of the player who blocked the field goal attempt on this play (if any).,True,False
+3018000,Play,FastBreak,boolean,,True,Indicates whether this play happened on a fast break.,True,True
+3018000,Play,SideOfBasket,string,10,True,The side of the basket that the field goal was attempted from (if any). Possible values: L; R,True,True
+3018000,Play,Updated,datetime,,True,The database generated timestamp of when this Play was last updated.,True,False
+3018000,Play,Created,datetime,,True,The database generated timestamp of when this Play was first created.,True,False
+3018000,Play,SubstituteInPlayerID,integer,32,True,The PlayerID of the player who substituted into the game.,True,False
+3018000,Play,SubstituteOutPlayerID,integer,32,True,The PlayerID of the player who substituted out of the game.,True,False
+3019000,Article,ArticleID,integer,32,False,Unique ID of the Article (assigned by FantasyData),True,False
+3019000,Article,Title,string,50,True,Article title,True,False
+3019000,Article,Source,string,50,True,Article source company,True,False
+3019000,Article,Updated,datetime,,False,Article publish/last updated date,True,False
+3019000,Article,Content,string,5000,True,Main Content of the article,True,True
+3019000,Article,Url,string,250,True,Source company article url,True,False
+3019000,Article,TermsOfUse,string,500,True,The terms of use with using this news item; credit must be given to the originator of the story when specified in the terms of use,True,False
+3019000,Article,Author,string,50,True,Article Author,True,True
+3019000,Article,Players,PlayerInfo[],,True,Basic info on players included in the article,True,False
+3020000,PlayerInfo,PlayerID,integer,32,False,Unique ID of the Player (assigned by FantasyData).,True,False
+3020000,PlayerInfo,Name,string,50,True,Name of Player.,True,False
+3020000,PlayerInfo,TeamID,integer,32,True,Unique ID of the Team the player belongs to (assigned by FantasyData).,True,False
+3020000,PlayerInfo,Team,string,50,True,Name of the team the player belongs to.,True,False
+3020000,PlayerInfo,Position,string,50,True,Position player plays.,True,True
+3021000,DfsSlate,SlateID,integer,32,False,Unique ID of a Slate (assigned by FantasyData).,True,False
+3021000,DfsSlate,Operator,string,20,True,The name of the operator who is running contests for this slate. Possible values: FanDuel; DraftKings; Yahoo; FantasyDraft; etc.,True,False
+3021000,DfsSlate,OperatorSlateID,integer,32,True,Unique ID of a slate (assigned by the operator).,True,False
+3021000,DfsSlate,OperatorName,string,50,True,The name of the slate (assigned by the operator). Possible values: Main; Express; Arcade; Late Night; etc.,True,False
+3021000,DfsSlate,OperatorDay,date,,True,The day (in EST/EDT) that the slate begins (assigned by the operator).,True,False
+3021000,DfsSlate,OperatorStartTime,datetime,,True,The date/time (in EST/EDT) that the slate begins (assigned by the operator).,True,False
+3021000,DfsSlate,NumberOfGames,integer,32,True,The number of actual games that this slate covers.,True,False
+3021000,DfsSlate,IsMultiDaySlate,boolean,,True,Whether this slate uses games that take place on different days.,True,False
+3021000,DfsSlate,RemovedByOperator,boolean,,True,Indicates whether this slate was removed/deleted by the operator.,True,False
+3021000,DfsSlate,OperatorGameType,string,50,True,The game type of the slate. Will often be null as most operators only have one game type.,True,False
+3021000,DfsSlate,DfsSlateGames,DfsSlateGame[],,True,The games that are included in this slate,True,False
+3021000,DfsSlate,DfsSlatePlayers,DfsSlatePlayer[],,True,The players that are included in this slate,True,False
+3021000,DfsSlate,SlateRosterSlots,string[],,True,The positions that need to be filled for this particular slate,True,False
+3021000,DfsSlate,SalaryCap,integer,,True,The salary cap for the current slate (is null for slates with no salary cap such a Tiers gametypes),True,False
+3022000,DfsSlateGame,SlateGameID,integer,32,False,Unique ID of a SlateGame (assigned by FantasyData).,True,False
+3022000,DfsSlateGame,SlateID,integer,32,False,The SlateID that this SlateGame refers to.,True,False
+3022000,DfsSlateGame,GameID,integer,32,True,The FantasyData GameID that this SlateGame refers to. This points to data in the respective sports' schedule/game/box score feeds.,True,False
+3022000,DfsSlateGame,Game,Game,,True,The details of the Game that this SlateGame refers to.,True,False
+3022000,DfsSlateGame,OperatorGameID,integer,32,True,Unique ID of a SlateGame (assigned by the operator).,True,False
+3022000,DfsSlateGame,RemovedByOperator,boolean,,True,Indicates whether this game was removed/deleted by the operator.,True,True
+3023000,DfsSlatePlayer,SlatePlayerID,integer,32,False,Unique ID of a SlatePlayer (assigned by FantasyData).,True,False
+3023000,DfsSlatePlayer,SlateID,integer,32,False,The SlateID that this SlatePlayer refers to.,True,False
+3023000,DfsSlatePlayer,SlateGameID,integer,32,True,The SlateGameID that this SlatePlayer refers to.,True,False
+3023000,DfsSlatePlayer,PlayerID,integer,32,True,The FantasyData PlayerID that this SlatePlayer refers to. This points to data in the respective sports' player feeds.,True,False
+3023000,DfsSlatePlayer,PlayerGameProjectionStatID,integer,32,True,The FantasyData StatID that this SlatePlayer refers to. This points to data in the respective sports' projected player game stats feeds.,True,False
+3023000,DfsSlatePlayer,OperatorPlayerID,string,25,True,Unique ID of the Player (assigned by the operator).,True,False
+3023000,DfsSlatePlayer,OperatorSlatePlayerID,string,50,True,Unique ID of the SlatePlayer (assigned by the operator).,True,False
+3023000,DfsSlatePlayer,OperatorPlayerName,string,50,True,The player's name (assigned by the operator).,True,False
+3023000,DfsSlatePlayer,OperatorPosition,string,10,True,The player's eligible positions for the contest (assigned by the operator).,True,False
+3023000,DfsSlatePlayer,OperatorSalary,integer,32,True,The player's salary for the contest (assigned by the operator).,True,False
+3023000,DfsSlatePlayer,OperatorRosterSlots,string[],,True,The player's eligible positions to be played in the contest (assigned by the operator). This would include UTIL; etc plays for those that are eligible.,True,False
+3023000,DfsSlatePlayer,RemovedByOperator,boolean,,True,Indicates whether this player was removed/deleted by the operator.,True,True
+3024000,OpponentSeason,StatID,integer,32,False,The unique ID of the stat,True,False
+3024000,OpponentSeason,TeamID,integer,32,True,The unique ID of the team,True,False
+3024000,OpponentSeason,SeasonType,integer,32,True,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Postseason; 4=Offseason; 5=AllStar).,True,False
+3024000,OpponentSeason,Season,integer,32,True,The NBA regular season for which these totals apply,True,False
+3024000,OpponentSeason,Name,string,50,True,Team name,True,False
+3024000,OpponentSeason,Team,string,10,True,The abbreviation of the Team,True,False
+3024000,OpponentSeason,Wins,integer,32,True,Total number of wins,True,False
+3024000,OpponentSeason,Losses,integer,32,True,Total number of losses,True,False
+3024000,OpponentSeason,OpponentPosition,string,10,True,Indicates which position is included in opponent stats that are aggregated together,True,False
+3024000,OpponentSeason,Possessions,decimal,32,True,The team's estimated number of possessions as defined by the formula here: http://www.basketball-reference.com/about/glossary.html,True,True
+3024000,OpponentSeason,GlobalTeamID,integer,32,True,A globally unique ID for this team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3024000,OpponentSeason,OpponentStat,OpponentSeason,,True,The aggregated season stats for this team's opponents,True,False
+3024000,OpponentSeason,Updated,datetime,,True,The timestamp of when the record was last updated (US Eastern Time),True,False
+3024000,OpponentSeason,Games,integer,32,True,The number of games played,True,False
+3024000,OpponentSeason,FantasyPoints,decimal,32,True,Total fantasy points,True,True
+3024000,OpponentSeason,Minutes,integer,32,True,Total number of minutes played,True,True
+3024000,OpponentSeason,Seconds,integer,32,True,Total number of seconds played,True,True
+3024000,OpponentSeason,FieldGoalsMade,decimal,32,True,Total number of field goals made,True,True
+3024000,OpponentSeason,FieldGoalsAttempted,decimal,32,True,Total number of field goals attempted,True,True
+3024000,OpponentSeason,FieldGoalsPercentage,decimal,32,True,Total field goal percentage,True,True
+3024000,OpponentSeason,EffectiveFieldGoalsPercentage,decimal,32,True,Total effective field goals percentage,True,True
+3024000,OpponentSeason,TwoPointersMade,decimal,32,True,Total two pointers made,True,True
+3024000,OpponentSeason,TwoPointersAttempted,decimal,32,True,Total two pointers attempted,True,True
+3024000,OpponentSeason,TwoPointersPercentage,decimal,32,True,Total two pointers percentage,True,True
+3024000,OpponentSeason,ThreePointersMade,decimal,32,True,Total three pointers made,True,True
+3024000,OpponentSeason,ThreePointersAttempted,decimal,32,True,Total three pointers attempted,True,True
+3024000,OpponentSeason,ThreePointersPercentage,decimal,32,True,Total three pointers percentage,True,True
+3024000,OpponentSeason,FreeThrowsMade,decimal,32,True,Total free throws made,True,True
+3024000,OpponentSeason,FreeThrowsAttempted,decimal,32,True,Total free throws attempted,True,True
+3024000,OpponentSeason,FreeThrowsPercentage,decimal,32,True,Total free throws percentage,True,True
+3024000,OpponentSeason,OffensiveRebounds,decimal,32,True,Total offensive rebounds,True,True
+3024000,OpponentSeason,DefensiveRebounds,decimal,32,True,Total defensive rebounds,True,True
+3024000,OpponentSeason,Rebounds,decimal,32,True,Total rebounds,True,True
+3024000,OpponentSeason,OffensiveReboundsPercentage,decimal,32,True,Total offensive rebounds percentage,True,True
+3024000,OpponentSeason,DefensiveReboundsPercentage,decimal,32,True,Total defensive rebounds percentage,True,True
+3024000,OpponentSeason,TotalReboundsPercentage,decimal,32,True,The player/team total rebounds percentage,True,True
+3024000,OpponentSeason,Assists,decimal,32,True,Total assists,True,True
+3024000,OpponentSeason,Steals,decimal,32,True,Total steals,True,True
+3024000,OpponentSeason,BlockedShots,decimal,32,True,Total blocked shots,True,True
+3024000,OpponentSeason,Turnovers,decimal,32,True,Total turnovers,True,True
+3024000,OpponentSeason,PersonalFouls,decimal,32,True,Total personal fouls,True,True
+3024000,OpponentSeason,Points,decimal,32,True,Total points scored,True,True
+3024000,OpponentSeason,TrueShootingAttempts,decimal,32,True,The player's true shooting attempts as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3024000,OpponentSeason,TrueShootingPercentage,decimal,32,True,The player's true shooting percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3024000,OpponentSeason,PlayerEfficiencyRating,decimal,32,True,The player's linear weight efficiency rating as defined here: http://bleacherreport.com/articles/113144-cracking-the-code-how-to-calculate-hollingers-per-without-all-the-mess,True,True
+3024000,OpponentSeason,AssistsPercentage,decimal,32,True,The player's assist percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3024000,OpponentSeason,StealsPercentage,decimal,32,True,The player's steal percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3024000,OpponentSeason,BlocksPercentage,decimal,32,True,The player's block percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3024000,OpponentSeason,TurnOversPercentage,decimal,32,True,The player's turnover percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3024000,OpponentSeason,UsageRatePercentage,decimal,32,True,The player's usage rate percentage as defined here: http://www.basketball-reference.com/about/glossary.html,True,True
+3024000,OpponentSeason,FantasyPointsFanDuel,decimal,32,True,Total FanDuel daily fantasy points scored,True,True
+3024000,OpponentSeason,FantasyPointsDraftKings,decimal,32,True,Total DraftKings daily fantasy points scored,True,True
+3024000,OpponentSeason,FantasyPointsYahoo,decimal,32,True,Total Yahoo daily fantasy points scored,True,True
+3024000,OpponentSeason,PlusMinus,decimal,32,True,Total plus minus,True,True
+3024000,OpponentSeason,DoubleDoubles,decimal,32,True,Total double-doubles scored,True,True
+3024000,OpponentSeason,TripleDoubles,decimal,32,True,Total triple-doubles scored,True,True
+3024000,OpponentSeason,FantasyPointsFantasyDraft,decimal,32,True,Total FantasyDraft daily fantasy points scored,True,True
+3024000,OpponentSeason,IsClosed,boolean,,False,Indicates whether the game is over and the stats for this player have been verified and closed out.,True,False
+3025000,BoxScore,Game,Game,,True,The details of the game associated with this box score,True,False
+3025000,BoxScore,Quarters,Quarter[],,True,The details of the quarters associated with this box score,True,False
+3025000,BoxScore,TeamGames,TeamGame[],,True,The team game stats associated with this box score,True,False
+3025000,BoxScore,PlayerGames,PlayerGame[],,True,The player game stats associated with this box score,True,False
+3026000,PlayByPlay,Game,Game,,True,The details of the game associated with this play-by-play,True,False
+3026000,PlayByPlay,Quarters,Quarter[],,True,The details of the quarters associated with this play-by-play,True,False
+3026000,PlayByPlay,Plays,Play[],,True,The details of the plays associated with this play-by-play,True,False
+3027000,GameOdd,GameOddId,integer,32,False,Unique ID of this odd,True,False
+3027000,GameOdd,Sportsbook,string,25,False,Name of sportsbook,True,True
+3027000,GameOdd,GameId,integer,32,False,The unique ID of the game,True,False
+3027000,GameOdd,Created,datetime,,False,The timestamp of when these odds were first created; based on US Eatern Time (EST/EDT).,True,False
+3027000,GameOdd,Updated,datetime,,False,The timestamp of when these odds were last updated; based on US Eatern Time (EST/EDT). If these are the latest odds for this game; and they have not been updated within the last few minutes; then it indicates that there were problems connecting to the sportsbook.,True,False
+3027000,GameOdd,HomeMoneyLine,integer,32,True,The sportsbook's money line for the home team,True,True
+3027000,GameOdd,AwayMoneyLine,integer,32,True,The sportsbook's money line for the away team,True,True
+3027000,GameOdd,HomePointSpread,decimal,32,True,The sportsbook's point spread for the home team,True,True
+3027000,GameOdd,AwayPointSpread,decimal,32,True,The sportsbook's point spread for the away team,True,True
+3027000,GameOdd,HomePointSpreadPayout,integer,32,True,The sportsbook's point spread payout for the home team,True,True
+3027000,GameOdd,AwayPointSpreadPayout,integer,32,True,The sportsbook's point spread payout for the away team,True,True
+3027000,GameOdd,OverUnder,decimal,32,True,The sportsbook's total points scored over under for the game,True,True
+3027000,GameOdd,OverPayout,integer,32,True,The sportsbook's payout for the over,True,True
+3027000,GameOdd,UnderPayout,integer,32,True,The sportsbook's payout for the under,True,True
+3027000,GameOdd,SportsbookId,integer,32,True,Unique ID of the Sportsbook,True,False
+3027000,GameOdd,OddType,string,10,True,The market type of the odd (ex: live; pregame; 1st-half; 2nd-quarter),True,False
+3028000,GameInfo,GameId,integer,32,False,The unique ID of the game.,True,False
+3028000,GameInfo,Season,integer,32,False,The calendar year of the season during which this game occurs.,True,False
+3028000,GameInfo,SeasonType,integer,32,False,The type of season that this record corresponds to (1=Regular Season; 2=Preseason; 3=Postseason; 4=Offseason; 5=AllStar).,True,False
+3028000,GameInfo,Day,date,,True,The day that the game is scheduled to be played in UTC.,True,False
+3028000,GameInfo,DateTime,datetime,,True,The date/time that the game is scheduled to be played in UTC.,True,False
+3028000,GameInfo,Status,string,20,True,Indicates the game's status. Possible values include: Scheduled; InProgress; Final; Suspended; Postponed; Canceled,True,False
+3028000,GameInfo,AwayTeamId,integer,32,True,The TeamId of the away team.,True,False
+3028000,GameInfo,HomeTeamId,integer,32,True,The TeamId of the home team.,True,False
+3028000,GameInfo,AwayTeamName,string,50,True,The name of the away team.,True,False
+3028000,GameInfo,HomeTeamName,string,50,True,The name of the home team.,True,False
+3028000,GameInfo,GlobalGameId,integer,32,False,A globally unique ID for this game. This value is guaranteed to be unique across all sports/leagues.,False,False
+3028000,GameInfo,GlobalAwayTeamId,integer,32,True,A globally unique ID for the away team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3028000,GameInfo,GlobalHomeTeamId,integer,32,True,A globally unique ID for the home team. This value is guaranteed to be unique across all sports/leagues.,False,False
+3028000,GameInfo,PregameOdds,GameOdd[],,True,List of Pregame GameOdds from different sportsbooks,True,False
+3028000,GameInfo,LiveOdds,GameOdd[],,True,List of Live GameOdds from different sportsbooks,True,False
+3028000,GameInfo,HomeTeamScore,integer,,True,Score of the home team (updated after game ends to allow for resolving bets),True,True
+3028000,GameInfo,AwayTeamScore,integer,,True,Score of the away team (updated after game ends to allow for resolving bets),True,True
+3028000,GameInfo,TotalScore,integer,,True,Total scored points in the game (updated after game ends to allow for resolving bets),True,True
+3028000,GameInfo,HomeRotationNumber,integer,32,True,The Rotation number of the home team for this game,True,True
+3028000,GameInfo,AwayRotationNumber,integer,32,True,The Rotation number of the away team for this game,True,True
+3028000,GameInfo,AlternateMarketPregameOdds,GameOdd[],,True,List of Alternate Market GameOdds from different sportsbooks (such as 1st-half; 1st-qtr; etc),True,True
+3029000,PlayerProp,PlayerID,integer,32,False,The PlayerID of the player,True,False
+3029000,PlayerProp,GameID,integer,32,False,The GameID of the game,True,False
+3029000,PlayerProp,Name,string,50,False,The full name of the player,True,False
+3029000,PlayerProp,Opponent,string,10,False,The TeamKey of the opponent in the game,True,False
+3029000,PlayerProp,Team,string,10,False,The TeamKey of the player's team in the game,True,False
+3029000,PlayerProp,DateTime,datetime,,False,The start time of the game (to give an idea of when prop should close),True,False
+3029000,PlayerProp,Description,string,50,False,A description of the stat the over/under is referring to (ex: Three Pointers Made),True,False
+3029000,PlayerProp,OverUnder,decimal,32,False,The over under value in question (ex: 1.5),True,True
+3029000,PlayerProp,OverPayout,integer,32,False,The (american styled) payout for a successful over bet.,True,True
+3029000,PlayerProp,UnderPayout,integer,32,False,The (american styled) payout for a successful under bet.,True,True
+3029000,PlayerProp,BetResult,string,50,False,A description of the result (Over; Under; or Push),True,True
+3029000,PlayerProp,StatResult,decimal,32,True,The final total from the game of the stat in question ,True,True
+3030000,Headshot,PlayerID,integer,32,False,Unique ID of the Player (assigned by FantasyData).,True,False
+3030000,Headshot,Name,string,100,True,Name of Player.,True,False
+3030000,Headshot,TeamID,integer,32,True,Unique ID of the Team the player belongs to (assigned by FantasyData).,True,False
+3030000,Headshot,Team,string,10,True,Name of the team the player belongs to.,True,False
+3030000,Headshot,Position,string,10,True,Position player plays.,True,False
+3030000,Headshot,PreferredHostedHeadshotUrl,string,500,True,The player's preferred hosted headshot URL. This returns the headshot with transparent background; if available.,True,False
+3030000,Headshot,PreferredHostedHeadshotUpdated,datetime,,True,The last updated date of the player's preferred hosted headshot.,True,False
+3030000,Headshot,HostedHeadshotWithBackgroundUrl,string,500,True,The player's hosted headshot URL.,True,False
+3030000,Headshot,HostedHeadshotWithBackgroundUpdated,datetime,,True,The last updated date of the player's hosted headshot.,True,False
+3030000,Headshot,HostedHeadshotNoBackgroundUrl,string,500,True,The player's transparent background hosted headshot URL.,True,False
+3030000,Headshot,HostedHeadshotNoBackgroundUpdated,datetime,,True,The last updated date of the player's transparent background hosted headshot.,True,False

@@ -179,7 +179,6 @@ plt.ylabel("Number of movies")
 plt.title("Evolution of rating")
 plt.show()
 
-""" 
 # ============= Summary of Genre ==========================
 # (Number of movies, Avg Rating, Avg Audience Rating, Avg Tomato Rating)
 rating_by_gender = all_data.groupby("first_genre")[["Rating_Score","audience_score", "tomatometer"]].mean().reset_index()
@@ -222,4 +221,3 @@ plt.xticks(rotation = 90)
 #plt.show()
 
 #print(all_data[["Title", "Year", "first_genre", "first_director", "Rating", "Rating_Score", "audience_score", "tomatometer","runtime"]])
- """
