@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Random Projects
 
 Just a regular repository with a bunch of random codes.
@@ -8,5 +7,8 @@ Just a regular repository with a bunch of random codes.
 
 Just a regular repository with a bunch of random codes.
 
-* Kmeans => Folder that contains the kmeans algorithm with the elbow chart for selecting the k value.
->>>>>>> 0e265032ee62982dae56365252746d46a9008a70
+* Kmeans            => The kmeans algorithm with the elbow chart for selecting the k value.
+* genetic_algorithm => The Simple Genetic Algorithm
+* pygames_basics    => Simple pygame
+* rotten_tomatos    => Scrapping of user's rotten tomatos account to save the movies in a csv
+* imdb              => Scrapping that saves a list of movies in IMDB webpage 
